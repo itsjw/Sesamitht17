@@ -1,0 +1,257 @@
+﻿@{ 
+    ViewData["Title"] = "Utskott";
+}
+    <!--Banner-->
+<section class="hero is-info is-large is-bold">
+    <div class="hero-body" id="utskott-banner">
+        <div class="container has-text-centered">
+            <h1 class="title is-1 has-text-white">
+                Utskott
+            </h1>
+            <h2 class="subtitle">
+                Sesam består förutom av en styrelse även av 7 st utskott. Dessa är näringslivsutskottet, finansutskottet, markandsförignsutskottet,
+                utbildningsutskottet, informatikutskottet, studiesociala och vår egna studentpub bryggan.
+            </h2>
+            <p class="subtitle">
+                Utskotten består av våra medlemmar och är oerhört viktiga för att Sesam ska fungera. Utskotten är de som möjliggör och genomför
+                de olika aktiviteter Sesam ordnar för sina medlemmar. Detta är aktiviteter som innebär bland anant utbildningsbevakning,
+                studiesociala aktiviteter så som sittningar och andra studiesociala evenemang samt kontakter med näringslivet.
+                Mer information om de olika utskotten hittar du nedan.
+            </p>
+        </div>
+    </div>
+    <!-- end container -->
+</section>
+<!-- end banner -->
+<!--TABS -->
+<div class="container">
+    <div class="tabs is-centered is-medium is-mobile">
+        <ul>
+            <li id="li-utskott-finans" class="tab-li is-active">
+                <a class="tablinks" id="defaultOpen" onclick="visaUtskott(event, 'utskott-finans')">
+                    <span class="icon is-small"><i class="fa fa-money"></i></span>
+                    <span>Finans</span>
+                </a>
+            </li>
+            <li id="li-utskott-informatik" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-informatik')">
+                    <span class="icon is-small"><i class="fa fa-code"></i></span>
+                    <span>Informatik</span>
+                </a>
+            </li>
+            <li id="li-utskott-marknadsforing" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-marknadsforing')">
+                    <span class="icon is-small"><i class="fa fa-share-alt"></i></span>
+                    <span>Marknadsföring</span>
+                </a>
+            </li>
+            <li id="li-utskott-naringsliv" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-naringsliv')">
+                    <span class="icon is-small"><i class="fa fa-handshake-o"></i></span>
+                    <span>Näringsliv</span>
+                </a>
+            </li>
+            <li id="li-utskott-studiesocialt" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-studiesocialt')">
+                    <span class="icon is-small"><i class="fa fa-bullhorn"></i></span>
+                    <span>Studiesocialt</span>
+                </a>
+            </li>
+            <li id="li-utskott-utbildning" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-utbildning')">
+                    <span class="icon is-small"><i class="fa fa-shield"></i></span>
+                    <span>Utbildning</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- end tabs -->
+</div>
+<!-- end container -->
+<!-- UTSKOTT -->
+<!--Finans -->
+<div id="utskott-finans" class="tabcontent" style="display: block;">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/finans.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Finansutskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Finansutskottets syfte är att främja intresset för den finansiella marknaden hos medlemmarna inom Sesam. Vi anordnar aktiviteter
+                        med fokus på den finansiella branschen. Aktiviteterna som står på schemat för kommande verksamhetsår
+                        är föreläsningar, aktiekvällar, en finansresa och den traditionsenliga aktietävlingen Game of
+                        Stocks. Utöver det har vi varje vecka ett nyhetssvep samt en analysgrupp som jobbar med att ta
+                        fram egna aktieanalyser, dit är alla välkomna, oberoende kunskapsnivå! Vi har en egen hemsida,
+                        gameofstocks.se, där du kan lära dig att handla aktier till riktiga priser, men med fiktiva pengar.
+                        Sesams Finansutskott har även en egen Facebooksida där vi sköter all kommunikation utåt om vad
+                        som händer inom utskottet, glöm inte att gilla den.
+                        <br> Är du intresserad av att engagera dig eller om du har någon fråga kan du alltid kontakta
+                        oss på finansutskottet@sesamit.se
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end finans -->
+<!-- Informatik -->
+<div id="utskott-informatik" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/informatik.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Informatikutskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Informatikutskottet består till största delen av informatiker och jobbar med att hitta på roliga aktiviteter med inriktning
+                        på IT, ofta tillsammans med företag. Här finns möjlighet att kontakta IT-företag angående aktiviteter
+                        och samarbete med Sesam, samt driva igenom idéer som gynnar informatikstudenterna, både tillsammans
+                        med företag och rent studiesociala aktiviteter. Tidigare har vi bland annat ordnat: Föreläsning
+                        och mingel hos Nethouse Barcraft på Sesams pub Bryggan Tjejkväll hos Nethouse Föreläsningar/projektkvällar
+                        på campus och vår alldeles egna informatiksittning som är öppen för alla sesamiter.
+                        <br> Är du intresserad av att gå med i informatikutskottet? Eller undrar du över något? Skicka
+                        ett mail till informatikutskottet@sesamit.se
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end informatik -->
+<!-- marknadsföring -->
+<div id="utskott-marknadsforing" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/marknadsföring.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Marknadsföringsutskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Marknadsföringsutskottet har som uppgift att få Sesam att synas både bland medlemmar men även externt, hos aktörer utanför
+                        universitetet. Utskottet arbetar aktivt med alla de övriga utskottens kommunikation för att på
+                        så sätt skapa en enhetlig profilering, detta görs genom text, foton och filmning, affischer och
+                        annat material. Medlemmarna i utskottet har sina egna ansvarsområden som motsvarar Sesams utskott,
+                        utöver det tillkommer tillverkning av introduktionstidning, foto och film på event samt andra
+                        projekt som anordnas av Sesam.
+                        <br> Är du intresserad av att gå med i utskottet eller har frågor, kontakta då: marknad@sesamit.se
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end marknadsföring -->
+<!-- näringsliv -->
+<div id="utskott-naringsliv" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/näringsliv.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Näringslivsutskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Näringslivsutskottet arbetar med att upprätthålla kontakten med Sesams Samarbetspartners. Vårt syfte är att minska klyftan
+                        mellan studenter och näringslivet. Är du med i näringsutskottet blir du oftast personlig kontaktperson
+                        till en av våra Samarbetspartners. Du ansvarar för att genomföra aktiviteter tillsammans med
+                        företaget samt att marknadsföra företaget på campus. Vi genomför också flera projekt med de andra
+                        utskotten där det passar sig att företag deltar.
+                        <br> Är du intresserad av att vara med i näringslivsutskottet eller hjälpa till med något projekt?
+                        Hör då av dig till: naringsliv@sesamit.se
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end näringsliv -->
+<!-- studiesocialt -->
+<div id="utskott-studiesocialt" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/Studiesociala-utskottet.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Studiesociala utskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Det studiesociala utskottet arrangerar olika aktiviteter som till exempel sittningar och sportturneringar. Detta utskott
+                        är till för att studenterna även ska ha roligt utanför skoltid. Målet är att få en ökad interaktion
+                        mellan alla studenter på Handelshögskolan och även folk i andra sektioner. Detta genom att erbjuda
+                        aktiviteter som passar alla smaker. Kort och gott så ska alla ha otroligt roligt på aktiviteter
+                        som studiesociala utskottet arrangerar!
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end studiesocialt -->
+<!-- utbildning -->
+<div id="utskott-utbildning" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/utblidning.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Utbildningsutskottet</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Utbildningsutskottet verkar för att garantera en bra kvalitet på våra utbildningar samt sprida kunskap gällande viktiga val
+                        inom ditt program. Vi fungerar som en länk mellan studenterna och Handelshögskolan/Örebro Universitet
+                        och vi hjälper dig när du känner dig orättvist behandlad eller helt enkelt inte tycker kursen
+                        du läser håller måttet.
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end utbildning -->
+<!-- end utskott -->

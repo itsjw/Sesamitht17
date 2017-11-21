@@ -1,0 +1,399 @@
+﻿@model Sesamit17.Models.EmailFormModel
+@{ 
+    ViewData["Title"] = "Bryggan";
+}
+    <!--Banner-->
+<section class="hero is-dark is-large">
+    <div class="hero-body" id="bryggan-banner">
+        <div class="has-text-centered" id="bryggan-logo">
+            <img src="C:\Users\Oliver\Documents\Skola\Sesam\sesamit-ht17\img\bryggan\logga.png">
+        </div>
+    </div>
+</section>
+<!-- end banner -->
+<!-- välkommen till bryggan -->
+<section class="section">
+    <div class="container">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical">
+                <div class="tile">
+                    <div class="tile is-parent is-vertical is-8">
+                        <article class="tile is-child">
+                            <p class="title is-1">Välkommen till Bryggan!</p>
+                            <p class="subtitle"> - Örebros ända riktiga studentpub</p>
+                            <div class="content">
+                                Bryggan är studentpuben på Örebro Universitets campus där alla studenter kan ha en trevlig stund, dricka och äta billigt.
+                                Belägen på Studentgatan 2 mitt emot Bågen och ett stenkast från Pressbyrån och Kårhuset.
+                                <br>
+                                <br> Bildades redan 1996 och har efter det växt mer och mer för varje år. Den ägs av studentsektionen
+                                Sesam på Örebro Universitet och samarbetar även med andra studentsektioner såväl som
+                                Örebro Studentkår och Kårhuset.
+                                <br>
+                                <br> Driven av studenter för studenter finns Bryggan öppen för den som är törstig och/eller
+                                hungrig.
+                                <br />
+                                <br />
+                                <div class="has-text-centered">
+                                    <a class="button is-link is-outlined" href="#bryggan-meny">
+                                        <span class="icon">
+                                            <i class="fa fa-arrow-down "></i>
+                                        </span>
+                                        <span>Kolla in vår meny!</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="tile is-child">
+                            <img src="~/images/bryggan/IMG_0916.jpg" />
+                        </article>
+                    </div>
+                    <div class="tile is-parent is-vertical">
+                        <article class="tile is-child is-warning">
+                            <article class="message">
+                                <div class="message-header">
+                                    <p>Öppettider</p>
+                                </div>
+                                <div class="message-body">
+                                    <p>
+                                        <strong>Onsdagar:</strong> 17.00 - 23.00
+                                    </p>
+                                    <p>
+                                        <strong>Fredagar:</strong> 19.00-01.00
+                                    </p>
+                                </div>
+                            </article>
+                        </article>
+                        <article class="tile is-child is-warning">
+                            <article class="message">
+                                <div class="message-header">
+                                    <p>Kontanter & Barappen</p>
+                                </div>  
+                                <div class="message-body">
+                                    <p>
+                                        Vi tar endast
+                                        <strong>kontanter</strong> eller
+                                        <strong>kortbetalning</strong> igenom Barappen. Ladda ner den här:
+                                    </p>
+                                    <br>
+                                    <div class="has-text-centered">
+                                        <a href="https://itunes.apple.com/se/app/barappen/id1029884143?mt=8" id="btn-barappen" target="_blank" class="button is-medium is-info is-outlined">
+                                            <i class="fa fa-2x fa-apple" aria-hidden="true"></i>
+                                        </a>
+                                        <br>
+                                        <br>
+                                        <a href="https://play.google.com/store/apps/details?id=se.barappen.barappen" id="btn-barappen" class="button is-medium is-info is-outlined"
+                                           target="_blank">
+                                            <i class="fa fa-2x fa-android" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </article>
+                    </div>
+                    <!-- end right tile-section -->
+                </div>
+                <!-- end tile -->
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</section>
+<!-- end välkommen bryggan -->
+<!-- Boka eller provjobba -->
+<section class="hero is-primary is-medium is-bold">
+    <div class="hero-body" id="bryggan-boka">
+        <div class="content">
+            <div class="column is-half is-offset-one-quarter">
+                <p class="title is-1">Boka eller provjobba?</p>
+                <p class="subtitle" id="bryggan-jobb-text">
+                    Är du intresserad av att boka eller prova arbeta på bryggan, kontakta klubbmästare
+                    <strong>Elin Hålldin</strong> via antingen
+                    <strong>
+                        <a>klubbmasteriet@sesamit.se</a>
+                    </strong>, telefon:
+                    <a>076-308 09 96</a> eller snacka med oss bakom baren helt enkelt!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end boka eller provjobba -->
+<!-- KONTAKT -->
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section class="section notification">
+        <div class="container">
+            <div class="column is-8  is-offset-2">
+                <p class="title is-3 has-text-weight-light has-text-centered">Hör gärna av dig om du vill boka eller jobba!</p>
+                    <div class="field">
+                        @Html.LabelFor(m => m.FullName, new { @class = "label" })
+                        <div class="control has-icons-left">
+                            @Html.TextBoxFor(m => m.FullName, new { @class = "input", @placeholder = "Förnamn & Efternamn" })
+                            @Html.ValidationMessageFor(m => m.FullName)
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        @Html.LabelFor(m => m.Sender, new { @class = "label" })
+                        <div class="control has-icons-left has-icons-right">
+                            @Html.TextBoxFor(m => m.Sender, new { @class = "input", @placeholder = "Email" })
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        @Html.LabelFor(m => m.Phone, new { @class = "label"})
+                        <div class="control has-icons-left">
+                            @Html.TextBoxFor(m => m.Phone, new { @class= "input", @placeholder = "Telefonnummer"})
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        @Html.LabelFor(m => m.Subject, new { @class = "label" })
+                        <div class="control has-icons-left">
+                            @Html.TextBoxFor(m => m.Subject, new { @class = "input", @placeholder = "Ämne" })
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-tag"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        @Html.LabelFor(m => m.Message, new { @class = "label" })
+                        <div class="control">
+                            @Html.TextAreaFor(m => m.Message, new { @class = "input" })
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <input class="button is-link is-outlined" type="submit" value="Skicka meddelande" />
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+}
+
+
+<!-- MENY -->
+<section class="section" id="bryggan-meny">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-beer fa-1x"></i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table id="beer-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Öl
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- end table -->
+            <div class="column">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-glass fa-1x"></i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table id="vin-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Vin
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                        <table id="cider-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Cider
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                        <table id="sprit-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Sprit
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                        <table id="lask-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Läsk
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- end table -->
+            </div>
+            <div class="column">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <i class="fa fa-cutlery fa-1x"></i>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <table id="mat-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Mat
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                        <table id="ovrigt-table" class="table table-striped table-bordered">
+                            <tr>
+                                <th>
+                                    Övrigt
+                                </th>
+                                <th>
+                                    Pris
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!-- end table -->
+            </div>
+        </div>
+        <!-- end columns -->
+    </div>
+    <!-- end container -->
+</section>
+    <!-- get menu script -->
+<script type="text/javascript">
+        $.getJSON("https://barappen.se:9310/api/v020/menu/1",
+            function (data) {
+                $.each(data.menu,
+                    function () {
+                        $.each(this,
+                            function () {
+                                if (this.category.name == "Öl") {
+                                    $("#beer-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                };
+                                if (this.category.name == "Vin") {
+                                    $("#vin-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                                if (this.category.name == "Cider") {
+                                    $("#cider-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                                if (this.category.name == "Sprit") {
+                                    $("#sprit-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                                if (this.category.name == "Mat") {
+                                    $("#mat-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                                if (this.category.name == "Övrigt") {
+                                    $("#ovrigt-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                                if (this.category.name == "Läsk") {
+                                    $("#lask-table")
+                                        .append("<tr> " +
+                                        "<td>" +
+                                        this.name +
+                                        "</td>" +
+                                        "<td>" +
+                                        (-1 * this.cost) +
+                                        " kr</td>" +
+                                        "</tr>" +
+                                        "");
+                                }
+                            });
+                    });
+            });
+
+</script>

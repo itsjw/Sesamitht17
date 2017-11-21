@@ -1,108 +1,219 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Package Management" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Bring in libraries from NuGet, Bower, and npm, and automate tasks using Grunt or Gulp.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525029&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner4.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <!-- Load screen -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
 </div>
-
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518004">Bower</a> for managing client-side libraries</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+    <!--Banner-->
+<section class="hero is-info is-large">
+    <div class="hero-body" id="hero-index">
+        <div class="container">
+            <p class="has-text-centered">
+                <img class="index-icon" src="~/images/sesamLogo-big.png" height="48"
+                     width="48">
+            </p>
+            <h1 class="title has-text-centered is-1 has-text-white" id="index-lofte">
+                Välkommen till Sesam
+            </h1>
+            <h1 class="subtitle has-text-centered has-text-white">Vi erbjuder Dig verktygen för en bättre studietid</h1>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699318">Add client packages using Bower.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run & Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
+</section>
+<!-- end banner -->
+    <!--jobbmöjligheter -->
+<div class="hero is-small">
+    <div class="notification" id="index-jobb">
+        <button class="delete"></button>
+            <div class="scroll-left">
+                <p class="has-text-centered has-text-white">
+                    <strong>Senaste jobbmöjligheten: </strong>
+                    <a asp-controller="Home" asp-action="Jobbmojligheter" class="has-text-white">
+                        Lindesberg - Associate till Ekonomiservice & Revision med start våren 2018
+                    </a>
+                </p>
+          </div>
     </div>
 </div>
+<!-- end jobbmöjligheter -->
+<!-- Pitch -->
+<section class="section">
+    <div class="container">
+        <div class="columns has-text-centered">
+            <div class="column">
+                <a class="button is-large is-danger img-rounded" asp-controller="Home" asp-action="Utskott">
+                    <span class="icon is-large">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                </a>
+                <p class="subtitle is-3 has-text-danger">ENGAGERA DIG!</p>
+                <p>
+                    Inom Sesam finns det många utskott där du kan engagera dig för att se till att vi alla får en så bra
+                    studietid som möjligt. Oavsett om du vill hålla på med marknadsföring, studiesociala aktiviteter,
+                    utbildning eller blanda drinkar och servera öl i vår alldeles egna pub, <strong><a asp-controller="Home" asp-action="Bryggan">Bryggan</a></strong>,
+                    så lovar vi dig att det finns något för dig. Läs mer om möjligheterna och
+                    våra <strong><a asp-controller="Home" asp-action="Utskott">utskott</a></strong> för att hitta något som passar dig!
+                </p>
+            </div>
+            <div class="column">
+                <a class="button is-large is-link img-rounded">
+                    <span class="icon is-large">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </a>
+                <p class="subtitle is-3 has-text-link">BLI MEDLEM!</p>
+                <p>
+                    Det finns många fördelar med att vara medlem i Sesam! Visste du att du kan hämta <strong>GRATIS</strong> kaffe varje dag i vår egen lounge i novahuset?
+                    Förutom fantastiskt kaffe erbjuder vi massvis med roliga aktiviteter såsom sittningar, idrottsevent, vinprovningar med mera.
+                    Dessutom får du förmånliga priser i vårat kära kårhus och massvis med andra roliga fördelar. 
+                    Du kan antingen köpa medlemskap <a href="https://medlem.orebrostudentkar.se/snabbetalning/" target="_blank"><strong>online här</strong></a> 
+                    eller kom förbi loungen under våra kontorstider mellan <strong>12.00 - 13.00</strong> så hjälper vi dig gärna!
+                </p>
+            </div>
+            <div class="column">
+                <a class="button is-success is-large img-rounded" asp-controller="Bryggan" asp-action="Bryggan">
+                    <span class="icon is-large">
+                        <i class="fa fa-beer"></i>
+                    </span>
+                </a>
+                <p class="subtitle is-3 has-text-success">BRYGGAN</p>
+                <p>
+                    Visste du att för <strong>endast 500kr</strong> kan bryggan bli din för kvällen? Vare sig du ska dra ihop årets förfest med polarna eller fira en födelsedag
+                    så lovar vi att bryggan kommer leverera god dryck och mat till ditt sällskap hela kvällen. Sugen på att boka? Hör då av dig till vår klubbmästare
+                    <strong>Elin Hålldin</strong> via<br> klubbmasteriet@sesamit.se eller<br> 076-308 09 96.<br>
+                    <strong><a asp-controller="Bryggan" asp-action="Bryggan">Läs mer om Bryggan här!</a></strong>
+                </p>
+            </div>
+            <div class="column">
+                <a class="button is-dark is-large img-rounded">
+                    <span class="icon is-large">
+                        <i class="fa fa-ticket has-text-white"></i>
+                    </span>
+                </a>
+                <p class="subtitle is-3 has-text-dark">EVENEMANG</p>
+                <p>
+                    Sesam anordnar varje år en rad uppskattade <strong><a href="c:\Users\Oliver\Documents\Skola\Sesam\sesamit-ht17\evenemang.html">evenemang</a></strong>.
+                    Vi anordnar allt från sittningar och sportevenemang till nätverksträffar med företag, case och föreläsningar.
+                    Allt detta sker inte av sig självt, utan Sesam behvöver ständigt engagerade medlemmar som kan hjälpa till för att detta ska vara möjligt.
+                    Vill du vara med bakom kulisserna och samtidigt utöka din erfarenhet med nya vänner? Tveka då inte att höra av dig till någon av våra utskottsansvariga eller
+                    kom förbi loungen. ALLA är välkomna!
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End pitch -->
+<!-- section ordförande
+<section class="hero is-info is-medium">
+    <div class="hero-body" id="hero-ordforande">
+        <div class="content">
+            <div class="column is-6 is-offset-6">
+                <h3 class="title is-1">
+                    <i class="fa fa-heart" aria-hidden="true"></i> Hej, Anton här!</h3>
+                <p>Jag är ordförande för studentsektionen Sesam och vill hälsa dig välkommen hit till vår hemsida.</p>
+                <p>Här inne finner du all information om vad vi i sektionen gör, hur vi arbetar och vad Du kan göra som
+                    medlem. Tveka inte att kontakta någon av oss i styrelsen om du vill veta mer om hur just du kan engagera
+                    dig.</p>
+                <p>Vi ses!</p>
+            </div>
+        </div>
+    </div>
+</section>
+ end ordförande sektion -->
+<!-- Trio -->
+<section class="section notification">
+    <div class="container">
+        <div class="columns has-text-centered">
+            <div class="column">
+                <span class="icon has-text-info">
+                    <i class="fa fa-road fa-4x" aria-hidden="true"></i>
+                </span>
+                <p class="subtitle">Introduktion</p>
+                <p>
+                    Din tid på universitetet börjar med en introduktion där du får möjlighet att få bästa möjliga start på
+                    din studietid.
+                </p>
+                <br>
+                <a class="button is-info is-outlined" asp-controller="Home" asp-action="Introduktion">Läs mer</a>
+            </div>
+            <div class="column">
+                <span class="icon has-text-info">
+                    <i class="fa fa-beer fa-4x" aria-hidden="true"></i>
+                </span>
+                <p class="subtitle">Bryggan</p>
+                <p>Vi driver studentpuben Bryggan där alla studenter, ovasett sektion, är välkomna att ha en trevlig stund.</p>
+                <br>
+                <a class="button is-info is-outlined" asp-controller="Bryggan" asp-action="Bryggan">Läs mer</a>
+            </div>
+            <div class="column">
+                <span class="icon has-text-info">
+                    <i class="fa fa-sitemap fa-4x" aria-hidden="true"></i>
+                </span>
+                <p class="subtitle">Utskott</p>
+                <p>Sesam består ut av en styrelse och 7 st utskott som är oerhört viktiga för att Sesam ska fungera.</p>
+                <br>
+                <a class="button is-info is-outlined" asp-controller="Home" asp-action="Utskott">Läs mer</a>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+</section>
+<!-- slut trio-->
+
+<hr class="navbar-divider">
+
+<!-- samarbetspartners -->
+<!-- 6 columns i varje rad -->
+<section class="section">
+    <h1 class="title has-text-centered">Samarbetspartners</h1>
+    <div class="container">
+        <div class="columns is-mobile">
+            <!-- rad 1 -->
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/lrfkonsult.gif" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/unionen.jpg" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/Pwc.gif" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/civilekonomerna.gif" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/KPMG.gif" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/GrandThornton.gif" /></a>
+            </div>
+        </div>
+        <!-- slut rad 1 -->
+        <div class="columns is-mobile">
+            <!-- rad 2 -->
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/KI_V3_RGB_sve_text.jpg" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/2000px-Ikea_logo.svg.png" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/strateg.png" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/academicwork.png" /></a>
+            </div>
+            <div class="column">
+                <a href="" target="_blank"><img src="~/images/foretag/Centigo BW.png" /></a>
+            </div>
+            <div class="column"></div>
+        </div>
+        <!--slut rad 2 -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- slut samarbetspartners -->

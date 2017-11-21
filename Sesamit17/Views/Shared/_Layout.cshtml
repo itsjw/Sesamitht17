@@ -1,71 +1,150 @@
-@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Sesamit17</title>
+    <title>@ViewData["Title"] - Sesamit</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/css/loader.css" rel="stylesheet" />
+        <link href="~/bulma-0.6.0/css/bulma.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </environment>
     <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/css/loader.css" rel="stylesheet" />
+        <link href="~/bulma-0.6.0/css/bulma.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </environment>
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Sesamit17</a>
+    <!-- Navigation -->
+    <nav class="navbar has-shadow" id="navbar-custom" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" asp-controller="Home" asp-action="Index">
+                <img src="~/images/sesamLogo-big.png" alt="Sesam" class="sesam-logo"/>
+                <h1 class="subtitle" id="navbar-title">Sesam</h1>
+            </a>
+
+            <button class="button navbar-burger is-transparent" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+            <div class="navbar-start" id="navbar-start">
+                <a class="navbar-item" asp-controller="Home" asp-action="Introduktion">Introduktion</a>
+                <a class="navbar-item" asp-controller="Home" asp-action="Evenemang">Våra evenemang</a>
+                <a class="navbar-item" asp-controller="Bryggan" asp-action="Bryggan">Bryggan</a>    
+                <a class="navbar-item" asp-controller="Home" asp-action="Produkter">Produkter</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Företag
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" asp-controller="Home" asp-action="Samarbetspartners">Samarbetspartners</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="Jobbmojligheter">Jobbmöjligheter</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="Mentorskapsprojektet">Mentorskapsprojektet</a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Om Sesam
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" asp-controller="Home" asp-action="VadArSesam">Vad är Sesam?</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="SesamsVardegrund">Sesams värdegrund</a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" asp-controller="Home" asp-action="Styrelsen">Styrelsen</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="Utskott">Utskott</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="FullmaktigeOchLedarmoter">Fullmäktige och ledarmöter</a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" asp-controller="Home" asp-action="Handlingar">Handlingar</a>
+                        <a class="navbar-item" asp-controller="Home" asp-action="Arkiv">Arkiv</a>
+                    </div>
+                </div>
+                <!--<a class="navbar-item" href="megan.html">MEGAN</a> -->
+                <a class="navbar-item" asp-controller="Home" asp-action="Campusmassan">Campusmässan</a>
+                <a class="navbar-item" asp-controller="Home" asp-action="KontaktaOss">Kontakta oss</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
+            <div class="navbar-end">
+                <a class="navbar-item" href="https://www.facebook.com/Sesamit/?fref=ts" target="_blank">
+                    <i class="fa fa-facebook-square fa-2x"></i>
+                </a>
+                <a class="navbar-item" href="https://www.instagram.com/sesamofficial/?hl=en" target="_blank">
+                    <i class="fa fa-instagram fa-2x"></i>
+                </a>
+                <a class="navbar-item" href="https://www.youtube.com/channel/UCPMUUnFPykfysRRaWxrccAA" target="_blank">
+                    <i class="fa fa-youtube fa-2x"></i>
+                </a>
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <!-- End navigation -->
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - Sesamit17</p>
-        </footer>
-    </div>
+    <!-- FOOTER-->
+    <footer class="footer custom-footer">
+        <div class="container">
+            <div class="columns has-text-centered">
+                <div class="column is-3 is-offset-1">
+                    <h1 class="subtitle has-text-white"><i class="fa fa-map" aria-hidden="true"></i> Adress</h1>
+                    <p>Studentsektionen Sesam</p>
+                    <p>Fakultetsgatan 1</p>
+                    <p>70181 Örebro</p>
+                </div>
+                <div class="column is-3">
+                    <p class="subtitle has-text-white"><i class="fa fa-clock-o" aria-hidden="true"></i> Öppettider</p>
+                    <p>Kontorstid:</p>
+                    <p> mån-fre 12.00-13.00</p>
+                    <p>ORU-kort:</p>
+                    <p> mån-fre  07.30-18.00</p>
+                </div>
+                <div class="column is-3">
+                    <h1 class="subtitle has-text-white"><i class="fa fa-envelope" aria-hidden="true"></i> Kontakt</h1>
+                    <p>070-918 78 91</p>
+                    <p>info@sesamit.se</p>
+
+                </div>
+            </div>
+            <div class="card-footer">
+                <p class="card-footer-item">
+                    <span>
+                        <a href="https://www.facebook.com/Sesamit/?fref=ts" class="has-text-white" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+                    </span>
+                </p>
+                <p class="card-footer-item">
+                    <span>
+                        <a href="https://www.instagram.com/sesamofficial/?hl=en" class="has-text-white" target="_blank"><i class="fa fa-instagram fa-3x"></i></a>
+                    </span>
+                </p>
+                <p class="card-footer-item">
+                    <span>
+                        <a href="https://www.youtube.com/channel/UCPMUUnFPykfysRRaWxrccAA" class="has-text-white" target="_blank"><i class="fa fa-youtube fa-3x"></i></a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+        <!--Javascript -->
+        <script src="~/js/site.js"></script>
+        <script src="~/js/loader.js"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <!--Javascript -->
+        <script src="~/js/site.js"></script>
+        <script src="~/js/loader.js"></script>
     </environment>
 
     @RenderSection("Scripts", required: false)
