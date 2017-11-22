@@ -7,7 +7,7 @@
     background-color: #3b469d;
 }
 .custom-footer {
-    background-color: #5542FF !important;
+    background-color: #001d45 !important;
     color: white;
 }
 .shadow {
@@ -63,7 +63,7 @@
 .navbar { position: fixed !important; top: 0; left: 0; right: 0; z-index: 1035; }
 
 .footer {
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
 }
 .sesam-logo {
     animation: zoom-small 0.5s linear;
@@ -325,7 +325,7 @@
     background-size: cover;
 }
 #bryggan-boka {
-    background-color: #3b469d;  
+    background-color: #001d45;
 }
 #bryggan-jobb-text {
     color: white;
