@@ -10,7 +10,7 @@
             </h1>
             <h2 class="subtitle">
                 Sesam består förutom av en styrelse även av 7 st utskott. Dessa är näringslivsutskottet, finansutskottet, markandsförignsutskottet,
-                utbildningsutskottet, informatikutskottet, studiesociala och vår egna studentpub bryggan.
+                utbildningsutskottet, informatikutskottet, studiesociala och vår egna studentpub Bryggan.
             </h2>
             <p class="subtitle">
                 Utskotten består av våra medlemmar och är oerhört viktiga för att Sesam ska fungera. Utskotten är de som möjliggör och genomför
@@ -31,6 +31,12 @@
                 <a class="tablinks" id="defaultOpen" onclick="visaUtskott(event, 'utskott-finans')">
                     <span class="icon is-small"><i class="fa fa-money"></i></span>
                     <span>Finans</span>
+                </a>
+            </li>
+            <li id="li-utskott-bryggan" class="tab-li">
+                <a class="tablinks" onclick="visaUtskott(event, 'utskott-bryggan')">
+                    <span class="icon is-small"><i class="fa fa-beer"></i></span>
+                    <span>Bryggan</span>
                 </a>
             </li>
             <li id="li-utskott-informatik" class="tab-li">
@@ -103,6 +109,33 @@
     </div>
 </div>
 <!--end finans -->
+<!-- Bryggan -->
+<div id="utskott-bryggan" class="tabcontent">
+    <div class="container">
+        <div class="column is-8 is-offset-2">
+            <div class="card">
+                <div class="card-image">
+                    <img src="~/images/Utskott/bryggan.jpg" alt="Placeholder image">
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-3 has-text-centered">Bryggan</p>
+                        </div>
+                    </div>
+
+                    <div class="content has-text-centered">
+                        <a class="button is-medium is-info is-outlined" asp-controller="Bryggan" asp-action="Bryggan">
+                            <span class="icon"><i class="fa fa-beer"></i></span>
+                            <span>Läs om bryggan här</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end bryggan-->
 <!-- Informatik -->
 <div id="utskott-informatik" class="tabcontent">
     <div class="container">
@@ -172,7 +205,7 @@
         <div class="column is-8 is-offset-2">
             <div class="card">
                 <div class="card-image">
-                    <img src="~/images/Utskott/näringsliv.jpg" alt="Placeholder image">
+                    <img src="~/images/Utskott/naringsliv.jpg" alt="Placeholder image">
                 </div>
                 <div class="card-content">
                     <div class="media">
@@ -232,7 +265,7 @@
         <div class="column is-8 is-offset-2">
             <div class="card">
                 <div class="card-image">
-                    <img src="~/images/Utskott/utblidning.jpg" alt="Placeholder image">
+                    <img src="~/images/Utskott/utbildning.jpg" alt="Placeholder image">
                 </div>
                 <div class="card-content">
                     <div class="media">
