@@ -60,6 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
           });
           mobile_expandable_menu();
       });
+      $('#hide-job-button').on('click', function (event) {
+          $('#job-notification').toggle('show');
+      });
   }); //end document ready
 
   //Utskott "slideshow"
@@ -87,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     evt.currentTarget.className += " active";
-}
+    }
 
 
 
