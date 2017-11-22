@@ -63,6 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
       $('#hide-job-button').on('click', function (event) {
           $('#job-notification').toggle('show');
       });
+      $('#btn-bryggan-meny').click(function () {
+          $('html, body').animate({
+              scrollTop:$("#bryggan-meny").offset().top
+          },2000);
+      });
   }); //end document ready
 
   //Utskott "slideshow"
