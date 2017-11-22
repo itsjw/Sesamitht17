@@ -4,7 +4,7 @@
     color: #5542FF;
 }
 .sesam-background {
-    background-color: #3b469d;
+    background-color: #001d45;
 }
 .custom-footer {
     background-color: #001d45 !important;
@@ -206,7 +206,7 @@
 
 @media screen and (max-width: 768px) {
     #hero-ordforande {
-        background: #3b469d;
+        background: #001d45;
     }
     .index-icon {
         display: none;
@@ -297,23 +297,23 @@
     background-size: cover;
 }
 #intro-grattis {
-    background-color: #3b469d;
+    background-color: #001d45;
 }
 #introk-tile {
-    background-color: #3b469d;
+    background-color: #001d45;
 }
 #intro-tile-footer {
-    background-color: #3b469d;
+    background-color: #001d45;
 }
 #btn-intro-schedual {
     width: 50%;
 }
-#btn-intro-schedual:hover {
-    background-color: white;
-    color: #3B469D;
-}
+    #btn-intro-schedual:hover {
+        background-color: white;
+        color: #001d45;
+    }
 #intro-valkommen {
-    background-color: #3B469D;
+    background-color: #001d45;
 }
 
 /* BRYGGAN */
@@ -357,11 +357,11 @@
 /* VAD ÄR SESAM */
 #hero-vad-ar-sesam {
     background-image: url("../images/styrelse/styrelsen-banner.jpg");
-    background-color: #3B469D;
+    background-color: #001d45;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
 }
 
 #hero-sero {
@@ -386,7 +386,7 @@
     background-size: cover; 
 }
 #vår-vision-hero {
-    background-color: #3B469D;
+    background-color: #001d45;
 }
 #vardegrund-thumb-text {
     padding-top: 100px;
@@ -395,7 +395,7 @@
 
 /* UTSKOTT */
 #utskott-banner {
-    background-color: #3B469D;
+    background-color: #001d45;
 }
 .tabcontent {
     display: none;
@@ -442,19 +442,19 @@
 
 /* JOBBMÖJLIGHETER */
 #jobbmojligheter-banner {
-    background-color: #3B469D;
-    background: -webkit-linear-gradient(left, #3B469D , rgb(39, 37, 80)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #3B469D, rgb(39, 37, 80)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #3B469D, rgb(39, 37, 80)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #3B469D , rgb(39, 37, 80)); /* Standard syntax */
+    background-color: #001d45;
+    background: -webkit-linear-gradient(left, #001d45, rgb(39, 37, 80)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #001d45, rgb(39, 37, 80)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #001d45, rgb(39, 37, 80)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #001d45, rgb(39, 37, 80)); /* Standard syntax */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .jobb-header {
-    background-color: #3B469D !important;
+    background-color: #001d45 !important;
 }
 
 /* MENTORSKAPSPROJEKTET */
@@ -514,5 +514,5 @@
 
 /* KONTAKTA OSS */
 #kontakta-oss-banner {
-    background-color: #3B469D;
+    background-color: #001d45;
 }
