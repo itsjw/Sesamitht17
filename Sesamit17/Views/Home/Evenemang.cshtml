@@ -5,7 +5,10 @@
 <section class="hero is-dark is-large">
     <div class="hero-body" id="hero-evenemang">
         <div class="container">
-            <br>
+            <div class="has-text-centered padding-top">
+                <p class="title is-1 has-text-white"><i class="fa fa-bullhorn fa-4x"></i></p>
+                <p class="title is-1 has-text-weight-normal has-text-white">Kolla in våra evenemang!</p>
+            </div>
         </div>
     </div>
     <!-- end container -->
@@ -16,11 +19,11 @@
     <div class="columns">
         <div class="column">
             <!-- SUP-Sittningen -->
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="SupSittningen">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/SUPSittning.jpg">
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">SUP-Sittningen</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">SUP-Sittningen</p>
                     </div>
                 </figure>
             </a>
@@ -28,33 +31,33 @@
         <!-- Herr o Dam -->
         <div class="column">
 
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="HerOchDam">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/herrodam.jpg" />
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Herr & Dam</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Herr- och damsittningen</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Informatiksittningen -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Informatik">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/informatiksittning.jpg" />
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Informatiksittningen</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Informatiksittningen</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Båtfesten -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Batfesten">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/båtfesten.jpg">
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Båtfesten</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Båtfesten</p>
                     </div>
                 </figure>
             </a>
@@ -64,44 +67,44 @@
     <div class="columns">
         <!-- After Work -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="AfterWork">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/after-work.jpg">
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">After Work</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">After Work</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Julbalen -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Julbalen">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/julbalen.jpg"/>
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Julbalen</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Julbalen</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Vårbalen -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Varbalen">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/Parties.jpg">
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Vårbalen</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Vårbalen</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Nätverksdagen -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Natverksdagen">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/networking.jpg"/>
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Nätverksdagen</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Nätverksdagen</p>
                     </div>
                 </figure>
             </a>
@@ -112,44 +115,44 @@
     <div class="columns">
         <!-- Sesam masters -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="SesamMasters">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/sesam-masters.jpg">
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Sesam masters</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Sesam Masters</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Sesam IF -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="SesamsIF">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/Parties.jpg"/>
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Sesam IF</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Sesams IF</p>
                     </div>
                 </figure>
             </a>
         </div>
         <!-- Kodstuga -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="Kodstuga">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/kodstuga.jpg"/>
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Kodstuga</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Kodstuga</p>
                     </div>
                 </figure>
             </a>
         </div>
-
+        <!-- Game of Stocks -->
         <div class="column">
-            <a href="#">
+            <a asp-controller="Evenemang" asp-action="GameOfStocks">
                 <figure class="image is-1-by-1">
                     <img class="brighten" src="~/images/evenemang/antons-header.png"/>
                     <div class="centered">
-                        <p class="title has-text-centered has-text-white evenemang-text">Game of Stocks</p>
+                        <p class="title is-4 has-no-wrap has-text-centered has-text-white evenemang-text">Game of Stocks</p>
                     </div>
                 </figure>
             </a>
