@@ -129,6 +129,12 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
+}
+#index-trio {
+    background-image: url("../images/headers/15-09-11-orebrodagen-2015-57644-faded.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .scroll-left {
@@ -222,6 +228,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 .centered {
     position: absolute;
@@ -258,6 +265,7 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-attachment: fixed;
 }
 /* Zoom In #1 */
 .hover01 figure img {
@@ -278,6 +286,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 @media screen and (max-width: 768px) {
     #samarbetspartners-icon {
@@ -295,9 +304,21 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
+}
+#info-introk {
+    background-image: url("../images/introduktion/intro-ht16.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 #intro-grattis {
     background-color: #001d45;
+}
+#valkommen-till-sesam {
+    background-image: url("../images/headers/20130913_orebrodagen_HT13-72999-faded.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 0px;
 }
 #introk-tile {
     background-color: #001d45;
@@ -307,6 +328,11 @@
 }
 #btn-intro-schedual {
     width: 50%;
+}
+@media screen and (max-width: 768px){
+    #btn-intro-schedual{
+        width:auto;
+    }
 }
     #btn-intro-schedual:hover {
         background-color: white;
@@ -323,6 +349,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 #bryggan-boka {
     background-color: #001d45;
@@ -343,6 +370,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 @media screen and (max-width: 768px) {
     #styrelsen-header-text {
@@ -362,6 +390,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #hero-sero {
@@ -383,7 +412,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
+    background-attachment: fixed;
 }
 #vår-vision-hero {
     background-color: #001d45;
@@ -419,7 +449,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* HANDLINGAR */
@@ -428,7 +459,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* ARKIV */
@@ -463,7 +495,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* MEGAN */
@@ -472,7 +505,8 @@
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
+    background-size: cover;
+    background-attachment: fixed;
 }
 #megan-om-hero {
     background-color: #b41e8e;
@@ -501,6 +535,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 @media screen and (max-width: 768px) {
