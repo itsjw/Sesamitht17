@@ -288,6 +288,11 @@
     background-size: cover;
     background-attachment: fixed;
 }
+#samarbeten-tiles{
+    background-image: url("../images/headers/SAM_4227.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+} 
 @media screen and (max-width: 768px) {
     #samarbetspartners-icon {
         display: none;
