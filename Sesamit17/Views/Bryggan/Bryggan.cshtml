@@ -155,70 +155,82 @@
 </section>
 <!-- end boka eller provjobba -->
 <!-- KONTAKT -->
+@if (ViewBag.Message != null)
+{
+    <section class="section notification" id="bryggan-boka">
+        <div class="container" id="success">
+            <p class="title is-1 has-text-white has-text-centered">@ViewBag.Message</p>
+        </div>
+    </section>
+}
+@if(ViewBag.Message == null)  {
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     <section class="section notification" id="bryggan-boka">
-        <div class="container">
+        <div class="container" id="success">
             <div class="column is-8  is-offset-2">
                 <p class="title is-3 has-text-weight-light has-text-centered has-text-white">Hör gärna av dig om du vill boka eller jobba!</p>
-                    <div class="field">
-                        @Html.LabelFor(m => m.FullName, new { @class = "label has-text-white" })
-                        <div class="control has-icons-left">
-                            @Html.TextBoxFor(m => m.FullName, new { @class = "input", @placeholder = "Förnamn & Efternamn" })
-                            @Html.ValidationMessageFor(m => m.FullName)
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-user"></i>
-                            </span>
-                        </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.FullName, new { @class = "label has-text-white" })
+                    <div class="control has-icons-left">
+                        @Html.TextBoxFor(m => m.FullName, new { @class = "input", @placeholder = "Förnamn & Efternamn" })
+                        @Html.ValidationMessageFor(m => m.FullName)
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-user"></i>
+                        </span>
                     </div>
+                </div>
 
-                    <div class="field">
-                        @Html.LabelFor(m => m.Sender, new { @class = "label has-text-white" })
-                        <div class="control has-icons-left has-icons-right">
-                            @Html.TextBoxFor(m => m.Sender, new { @class = "input", @placeholder = "Email" })
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-envelope"></i>
-                            </span>
-                        </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Sender, new { @class = "label has-text-white" })
+                    <div class="control has-icons-left has-icons-right">
+                        @Html.TextBoxFor(m => m.Sender, new { @class = "input", @placeholder = "Email" })
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
                     </div>
-                    <div class="field">
-                        @Html.LabelFor(m => m.Phone, new { @class = "label has-text-white"})
-                        <div class="control has-icons-left">
-                            @Html.TextBoxFor(m => m.Phone, new { @class= "input", @placeholder = "Telefonnummer"})
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-phone"></i>
-                            </span>
-                        </div>
+                </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Phone, new { @class = "label has-text-white" })
+                    <div class="control has-icons-left">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "input", @placeholder = "Telefonnummer" })
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-phone"></i>
+                        </span>
                     </div>
+                </div>
 
-                    <div class="field">
-                        @Html.LabelFor(m => m.Subject, new { @class = "label has-text-white" })
-                        <div class="control has-icons-left">
-                            @Html.TextBoxFor(m => m.Subject, new { @class = "input", @placeholder = "Ämne" })
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-tag"></i>
-                            </span>
-                        </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Subject, new { @class = "label has-text-white" })
+                    <div class="control has-icons-left">
+                        @Html.TextBoxFor(m => m.Subject, new { @class = "input", @placeholder = "Ämne" })
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-tag"></i>
+                        </span>
                     </div>
+                </div>
 
-                    <div class="field">
-                        @Html.LabelFor(m => m.Message, new { @class = "label has-text-white" })
-                        <div class="control">
-                            @Html.TextAreaFor(m => m.Message, new { @class = "input" })
-                        </div>
+                <div class="field">
+                    @Html.LabelFor(m => m.Message, new { @class = "label has-text-white" })
+                    <div class="control">
+                        @Html.TextAreaFor(m => m.Message, new { @class = "input" })
                     </div>
+                </div>
 
-                    <div class="field is-grouped">
-                        <div class="control">
-                            <input class="button is-white is-outlined" type="submit" value="Skicka meddelande" />
-                        </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <input class="button is-white is-outlined" type="submit" value="Skicka meddelande" />
                     </div>
+                </div>
+                <p>@ViewBag.Message</p>
             </div>
         </div>
     </section>
 
 }
+}
+
 
 
 <!-- MENY -->
@@ -336,6 +348,18 @@
     </div>
     <!-- end container -->
 </section>
+@if(ViewBag.Message == "Tack för ditt meddelande!")
+{
+    <script>
+        $(document).ready(function () {
+            $('html, body').animate({
+                scrollTop: $('#success').offset().top
+            }, 1);
+        });
+    </script> 
+
+}
+
     <!-- get menu script -->
 <script type="text/javascript">
         $.getJSON("https://barappen.se:9310/api/v020/menu/1",

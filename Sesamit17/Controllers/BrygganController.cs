@@ -24,6 +24,8 @@ namespace Sesamit17.Controllers
                 var mimeMessage = new MimeMessage();
                 mimeMessage.From.Add(new MailboxAddress(model.FullName, "klubbmasteriet@sesamit.se"));
                 mimeMessage.To.Add(new MailboxAddress("klubbmasteriet@sesamit.se", "klubbmasteriet@sesamit.se"));
+                //mimeMessage.From.Add(new MailboxAddress(model.FullName, "it@sesamit.se"));
+                //mimeMessage.To.Add(new MailboxAddress("it@sesamit.se", "it@sesamit.se"));
                 mimeMessage.Subject = model.Subject;
                 mimeMessage.Body = new TextPart("plain")
                 {
@@ -33,9 +35,10 @@ namespace Sesamit17.Controllers
                 {
                     smtp.Connect("smtp.gmail.com", 587, false);
                     smtp.Authenticate("klubbmasteriet@sesamit.se", "Creativeslix123");
+                    //smtp.Authenticate("it@sesamit.se", "SYSTEMVETARE123");
                     await smtp.SendAsync(mimeMessage);
-                    ViewBag.Message = "Ditt meddelande har skickats";
-                    return RedirectToAction("Bryggan");
+                    ViewBag.Message = "Tack för ditt meddelande!";
+                    return View(model);
                 }
             }
             return View(model);
