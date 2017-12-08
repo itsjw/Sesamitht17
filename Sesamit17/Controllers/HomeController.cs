@@ -84,5 +84,9 @@ namespace Sesamit17.Controllers
         {
             return View();
         }
+        public IActionResult Schema()
+        {
+            return View();
+        }
     }
 }
