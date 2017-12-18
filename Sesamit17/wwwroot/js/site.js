@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
     
             // Toggle the class on both the "navbar-burger" and the "navbar-menu"
-            $el.classList.toggle('is-active');
+            //$el.classList.toggle('is-active');
             $target.classList.toggle('is-active');
             navbarStart.classList.toggle("is-active");
     
